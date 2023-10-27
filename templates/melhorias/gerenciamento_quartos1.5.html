@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciamento de Quartos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="andar">
+        <h1>Térreo</h1>
+        <div class="portas">
+            <div class="porta vazio" onclick="alterarStatus(this)">01</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">02</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">03</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">04</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">05</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">06</div>
+        </div>
+    </div>
+    
+    <div class="andar">
+        <h1>Primeiro Andar</h1>
+        <div class="portas">
+            <div class="porta vazio" onclick="alterarStatus(this)">11</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">12</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">13</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">14</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">15</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">16</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">17</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">18</div>
+        </div>
+    </div>
+    
+    <div class="andar">
+        <h1>Segundo Andar</h1>
+        <div class="portas">
+            <div class="porta vazio" onclick="alterarStatus(this)">21</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">22</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">23</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">24</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">25</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">26</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">27</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">28</div>
+        </div>
+    </div>
+    
+    <div class="andar">
+        <h1>Terceiro Andar</h1>
+        <div class="portas">
+            <div class="porta vazio" onclick="alterarStatus(this)">31</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">32</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">33</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">34</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">35</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">36</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">37</div>
+            <div class="porta vazio" onclick="alterarStatus(this)">38</div>
+        </div>
+    </div>
+
+    <script>
+        function alterarStatus(element) {
+            if (element.classList.contains("vazio")) {
+                element.classList.remove("vazio");
+                element.classList.add("ocupado");
+            } else {
+                element.classList.remove("ocupado");
+                element.classList.add("vazio");
+            }
+        }
+    </script>
+</body>
+</html>

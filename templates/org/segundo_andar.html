@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Segundo Andar - Quartos</title>
+    <style>
+        .ocupado { background-color: red; }
+        .livre { background-color: green; }
+    </style>
+</head>
+<body>
+    <h1>Segundo Andar - Quartos</h1>
+    <table>
+        <tr>
+            <th>Quarto</th>
+            <th>Status</th>
+        </tr>
+        {% for i in range(21, 29) %}
+        <tr>
+            <td>Quarto {{ i }}</td>
+            <td class="{{ 'ocupado' if quartos[i-1] == 'ocupado' else 'livre' }}">
+                {{ quartos[i-1] }}
+            </td>
+            <td><a href="{{ url_for('alterar_status', quarto=i) }}">Alterar Status</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

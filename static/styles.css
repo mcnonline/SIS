@@ -1,0 +1,34 @@
+/* styles.css */
+
+.andar { /*Modificar para um cenário com mais design futuramente */
+    text-align: center;
+}
+
+.portas {
+    display: flex;
+    flex-direction: row; /* Exibição de portas na horizontal */
+    align-items: center; /* Alinhamento de portas verticalmente no centro */
+    justify-content: space-around; /* Espaçamento uniforme entre as portas */
+}
+
+.porta {
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+    cursor: pointer; /* Mudança de cursor para indicar que a porta é clicável */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 24px;
+}
+
+/* Estilos para quartos ocupados */
+.porta.ocupado {
+    background-color: red; /* Cor de fundo para quartos ocupados */
+}
+
+/* Estilos para quartos vazios */
+.porta.vazio {
+    background-color: green; /* Cor de fundo para quartos vazios */
+}
